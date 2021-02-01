@@ -1,11 +1,40 @@
+<html>
+<head>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+
 <!-- 이것 보단 -->
-<p v-show="showMe">Some text</p>
-<p v-show="showMe">Some more text</p>
-<p v-show="showMe">Even more text</p>
+<div id="app">
+  <p v-show="showMe">기모뫼</p>
+  <p v-show="showMe">기모뫼</p>
+  <p v-show="showMe">기모뫼</p>
 
 <!-- 이게 낫습니다. -->
-<div v-show="showMe">
-  <p>Some text</p>
-  <p>Some more text</p>
-  <p>Even more text</p>
+  <div v-show="!showMe">
+    <p>Some text</p>
+    <p>Some more text</p>
+    <p>Even more text</p>
+  </div>
+  <button v-on:click="changeButton">클릭</button>
 </div>
+
+
+<script type="text/javascript">
+ 
+  var webstore = new Vue({
+    el: '#app',
+    data: {
+      showMe:false,
+     
+      cart: []
+    },
+    methods: {
+      changeButton: function() {
+        return this.showMe = !this.showMe;
+      }
+    },
+   
+    
+  });
+</script>
+</html>

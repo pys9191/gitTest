@@ -8,7 +8,7 @@
 <body>
   <div id="app">
     <p>
-      넓이: {{ area }}
+      넓이: {{area}}
     </p>
     <p>
       <button v-on:click="length += 1">세로 추가</button>
@@ -48,9 +48,12 @@
         }
       },
       beforeUpdate: function() {
-        console.log('데이터 변경은 '
+        alert('데이터 변경은 '
                     + '결괏값 변경 이전에 이루어졌습니다.');
-      }
+      },
+      updated:() => {
+       console.log('sex');
+      },
     });
   </script>
 </body>

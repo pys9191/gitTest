@@ -1,5 +1,5 @@
 methods: {
-  addToCart: function() {
+  addToCart: () => {
     this.cart.push(this.product.id);
   }
 }

@@ -25,6 +25,7 @@
             <button class="btn btn-primary btn-lg"
               v-on:click="addToCart">장바구니 담기
             </button>
+            <p>{{cartItemCount}}</p>
           </div>
         </div>
       </div><!--end of row-->
@@ -48,6 +49,7 @@
     },
     methods: {
       addToCart: function() {
+        
         this.cart.push( this.product.id );
       },
     },
