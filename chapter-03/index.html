@@ -72,7 +72,7 @@
         this.cart.push( this.product.id );
       },
       showCheckout() {
-        this.showProduct = this.showProduct ? false: true;
+        this.showProduct = !this.showProduct;
       },
     },
     computed: {
